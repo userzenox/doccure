@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Patient Health Record</title>
+  <script src="https://kit.fontawesome.com/c1df782baf.js"></script>
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-thin-rounded/css/uicons-thin-rounded.css'>
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+  <link rel="stylesheet" href="style.css">
+  <style> body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  header {
+    text-align: center;
+  }
+  
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  section {
+    width: 300px;
+    margin-bottom: 20px;
+  }</style>
+</head>
+<body>
+    <header>
+        
+        <div class="logo"><img src="images/logo3.png" alt=""></div>
+
+        <nav class="navbar">
+            <a href="./index.html">Home</a>
+            
+            <a href="./service.html">Service</a>
+            <a href="./Patient.html">Gallery</a>
+            <a href="#Home">Blog</a>
+            <a href="#Home">Contact</a>
+        </nav>
+
+        <div class="right-icons">
+            <div id="menu-bars" class="fas fa-bars"></div>
+            <div class="btn">Make Appointment</div>
+        </div>
+        
+    </header>
+
+<main>
+    <div class="our-service">
+        <div class="service-heading">
+            
+            
+            <h2>Our Services</h2>
+        </div>
+  
+
+        <section class="patient-info">
+            <h2>Patient Information</h2>
+            <div class="patient-details">
+                <img src="images/patient_photo.jpg" alt="Patient Photo">
+                <div>
+                    <h4>Alexander Dean</h4>
+                    <p>Patient ID: 123456789</p>
+                    <p>Age: 28</p>
+                    <button>View Profile</button>
+                    <button>Edit Profile</button>
+                </div>
+            </div>
+        </section>
+        <section class="vital-signs">
+            <h2>Vital Signs</h2>
+            <table>
+                <tr>
+                    <th>Heart Rate</th>
+                    <th>Oxygen Saturation</th>
+                    <th>Body Temperature</th>
+                    <th>Glucose Level</th>
+                </tr>
+                <tr>
+                    <td>84 bpm</td>
+                    <td>99%</td>
+                    <td>96.5°F</td>
+                    <td>100 mg/dL</td>
+                </tr>
+            </table>
+        </section>
+        <section class="test-reports">
+            <h2>Test Reports</h2>
+            <ul>
+                <li><img src="images/ct_scan.png" alt="CT Scan"> CT Scan Abdomen (12th December 2020)</li>
+                <li><img src="images/blood_test.png" alt="Blood Test"> Blood Test (15th December 2020)</li>
+                <li><img src="images/pathology_test.png" alt="Pathology Test"> Pathology Test (20th December 2020)</li>
+            </ul>
+        </section>
+        <section class="prescriptions">
+            <h2>Prescriptions</h2>
+            <table>
+                <tr>
+                    <th>Information</th>
+                    <th>Heart Disease</th>
+                    <th>Skin Care</th>
+                    <th>Diabetes Disease</th>
+                </tr>
+                <tr>
+                    <td>Gender: Male</td>
+                    <td>12 months</td>
+                    <td></td>
+                    <td>12 months</td>
+                </tr>
+                <tr>
+                    <td>Blood Type: A+</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                </table>
+            <button>Add a Prescription</button>
+        </section>
+  </main>
+</body>
+</html>
