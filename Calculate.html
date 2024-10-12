@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Patient Health Record</title>
+  <script src="https://kit.fontawesome.com/c1df782baf.js"></script>
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-thin-rounded/css/uicons-thin-rounded.css'>
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+    :root {
+        --maincolor: #2ec8a6;
+        --secondcolor: #f8a803;
+        --thirdcolor: #f4ab01;
+        --textcolor: #4A5764;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        outline: none;
+        border: none;
+        text-decoration: none;
+        text-transform: capitalize;
+        transition: all 0.2s linear;
+        font-family: "Inter", sans-serif;
+    }
+
+    html {
+        font-size: 62.5%;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+        scroll-padding-top: 6rem;
+    }
+
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.5rem 7%;
+        width: 100%;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        background-color: white;
+    }
+
+    .logo {
+        width: 150px;
+    }
+
+    .logo img {
+        width: 100%;
+    }
+
+    .navbar a {
+        color: var(--textcolor);
+        font-size: 1.7rem;
+        margin: 1rem;
+        position: relative;
+        transition: 0.5s;
+    }
+
+    .navbar a:hover {
+        color: var(--maincolor);
+    }
+
+    .navbar a::after {
+        content: "";
+        background-color: var(--maincolor);
+        width: 0;
+        position: absolute;
+        height: 0.2rem;
+        left: 0;
+        margin-top: 0.5rem;
+        top: 100%;
+        transition: 0.5s;
+    }
+
+    .navbar a:hover::after {
+        width: 100%;
+    }
+
+    #menu-bars {
+        color: var(--textcolor);
+        font-size: 2.5rem;
+        cursor: pointer;
+        margin-right: 1rem;
+        display: none;
+    }
+
+    #menu-bars:hover {
+        color: var(--maincolor);
+    }
+
+    .right-icons .btn {
+        padding: 1.2rem 2rem;
+        font-size: 1.7rem;
+        background: var(--maincolor);
+        color: white;
+        cursor: pointer;
+    }
+
+    .right-icons .btn:hover {
+        background-color: var(--secondcolor);
+    }
+
+    main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 2rem 7%;
+        margin-top: 6rem;
+    }
+
+    .section {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+        margin-top: 10rem;
+    }
+
+    .form-row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    
+    form {
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: white;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    }
+
+    form div {
+        margin-bottom: 15px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+        color: var(--textcolor);
+    }
+
+    input[type="text"], input[type="number"] {
+        width: 100%;
+        padding: 8px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .btn-submit {
+        background-color: var(--maincolor);
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .btn-submit:hover {
+        background-color: var(--secondcolor);
+    }
+
+    .details {
+        margin-top: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+    }
+
+    .patient-review {
+        margin-top: 20px;
+        padding: 15px;
+        border: 1px solid var(--maincolor);
+        border-radius: 10px;
+        background-color: #f5f5f5;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    }
+
+    .patient-review h3 {
+        color: var(--maincolor);
+    }
+
+    @media (max-width: 768px) {
+        html {
+            font-size: 55%;
+        }
+
+        .right-icons {
+            display: flex;
+            align-items: center;
+        }
+
+        #menu-bars {
+            display: initial;
+        }
+
+        header {
+            padding: 2rem;
+            background-color: white;
+        }
+
+        .navbar {
+            position: absolute;
+            top: 100%;
+            left: -100%;
+            height: 100vh;
+            width: 100%;
+            background-color: white;
+        }
+
+        .navbar.active {
+            left: 0;
+        }
+
+        .navbar a {
+            display: block;
+            margin: 2rem;
+            padding: 1rem;
+            border: 1px solid var(--textcolor);
+        }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo"><img src="images/logo3.png" alt="Company Logo"></div>
+    <nav class="navbar">
+      <a href="./index.html">Home</a>
+      <a href="./service.html">Service</a>
+      <a href="./Patient.html">Gallery</a>
+      <a href="#Home">Blog</a>
+      <a href="#Home">Contact</a>
+    </nav>
+    <div class="right-icons">
+      <div id="menu-bars" class="fas fa-bars"></div>
+      <div class="btn">Make Appointment</div>
+    </div>
+  </header>
+
+  <main>
+    <div class="section">
+      <form id="patientForm">
+        <div>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+          <label for="age">Age:</label>
+          <input type="number" id="age" name="age" required>
+        </div>
+        <div>
+          <label for="height">Height (cm):</label>
+          <input type="number" id="height" name="height" required>
+        </div>
+        <div>
+          <label for="weight">Weight (kg):</label>
+          <input type="number" id="weight" name="weight" required>
+        </div>
+        <div>
+          <button type="submit" class="btn-submit">Submit</button>
+        </div>
+      </form>
+
+      <div id="details" class="details"></div>
+    </div>
+  </main>
+
+  <script>
+    document.getElementById('menu-bars').addEventListener('click', function() {
+      document.querySelector('.navbar').classList.toggle('active');
+    });
+
+    document.getElementById('patientForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent the form from submitting the traditional way
+
+      // Capture the input values
+      const name = document.getElementById('name').value;
+      const age = document.getElementById('age').value;
+      const height = document.getElementById('height').value;
+      const weight = document.getElementById('weight').value;
+
+      // Calculate BMI
+      const heightInMeters = height / 100;
+      const bmi = (weight / (heightInMeters * heightInMeters)).toFixed(2);
+
+      // Determine BMI category
+      let bmiCategory;
+      if (bmi < 18.5) {
+        bmiCategory = "Underweight";
+      } else if (bmi >= 18.5 && bmi < 24.9) {
+        bmiCategory = "Normal weight";
+      } else if (bmi >= 25 && bmi < 29.9) {
+        bmiCategory = "Overweight";
+      } else {
+        bmiCategory = "Obesity";
+      }
+
+      // Create a new div for the patient review
+      const reviewDiv = document.createElement('div');
+      reviewDiv.classList.add('patient-review');
+      reviewDiv.innerHTML = `
+        <h3>Patient Details:</h3>
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Age:</strong> ${age}</p>
+        <p><strong>Height:</strong> ${height} cm</p>
+        <p><strong>Weight:</strong> ${weight} kg</p>
+        <p><strong>BMI:</strong> ${bmi} (${bmiCategory})</p>
+      `;
+
+      // Append the new review to the details section
+      document.getElementById('details').appendChild(reviewDiv);
+
+      // Optionally, clear the form fields after submission
+      document.getElementById('patientForm').reset();
+    });
+  </script>
+</body>
+</html>

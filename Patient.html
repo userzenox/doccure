@@ -5,120 +5,198 @@
   <script src="https://kit.fontawesome.com/c1df782baf.js"></script>
   <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-thin-rounded/css/uicons-thin-rounded.css'>
   <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+  <link rel="stylesheet" href="Patient.css">
   <link rel="stylesheet" href="style.css">
-  <style> body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
-  }
-  
-  header {
-    text-align: center;
-  }
-  
-  main {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  
-  section {
-    width: 300px;
-    margin-bottom: 20px;
-  }</style>
+ 
 </head>
 <body>
-    <header>
-        
-        <div class="logo"><img src="images/logo3.png" alt=""></div>
+  <header>
+    <div class="logo"><img src="images/logo3.png" alt=""></div>
 
-        <nav class="navbar">
-            <a href="./index.html">Home</a>
-            
-            <a href="./service.html">Service</a>
-            <a href="./Patient.html">Gallery</a>
-            <a href="#Home">Blog</a>
-            <a href="#Home">Contact</a>
-        </nav>
+    <nav class="navbar">
+        <a href="./index.html">Home</a>
+        <a href="./service.html">Service</a>
+        <a href="./Patient.html">Patient</a>
+        <a href="./Doctors.html">Doctors</a>
+        <a href="./Contacts">Contact</a>
+    </nav>
 
-        <div class="right-icons">
-            <div id="menu-bars" class="fas fa-bars"></div>
-            <div class="btn">Make Appointment</div>
+    <div class="right-icons">
+        <div id="menu-bars" class="fas fa-bars"></div>
+        <div class="btn">Make Appointment</div>
+    </div>
+</header>
+
+
+
+  <div class="service-heading">
+    <h2></h2>
+    <h2></h2>
+    
+  <h2>Patients Details</h2>
+  <h2></h2>
+</div>
+
+  <div class="technology">
+    <div class="main-technology" id="technologySection">
+      <!-- Technology boxes will be dynamically added here -->
+    </div>
+  </div>
+
+ 
+
+
+  <main>
+   
+    
+    <div class="section">
+          
+      <form id="patientForm">
+        <div class="heading">
+          <h1> Input Patient's Details</h1>
+      
         </div>
-        
-    </header>
-
-<main>
-    <div class="our-service">
-        <div class="service-heading">
-            
-            
-            <h2>Our Services</h2>
+        <div>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
         </div>
-  
+        <div>
+          <label for="age">Age:</label>
+          <input type="number" id="age" name="age" required>
+        </div>
+        <div>
+          <label for="email">Email:</label>
+          <input type="text" id="email" name="email" required>
+        </div>
+        <div>
+          <label for="phone">Phone:</label>
+          <input type="text" id="phone" name="phone" required>
+        </div>
+        <div>
+          <button type="submit" class="btn-submit">Submit</button>
+        </div>
+      </form>
 
-        <section class="patient-info">
-            <h2>Patient Information</h2>
-            <div class="patient-details">
-                <img src="images/patient_photo.jpg" alt="Patient Photo">
-                <div>
-                    <h4>Alexander Dean</h4>
-                    <p>Patient ID: 123456789</p>
-                    <p>Age: 28</p>
-                    <button>View Profile</button>
-                    <button>Edit Profile</button>
-                </div>
-            </div>
-        </section>
-        <section class="vital-signs">
-            <h2>Vital Signs</h2>
-            <table>
-                <tr>
-                    <th>Heart Rate</th>
-                    <th>Oxygen Saturation</th>
-                    <th>Body Temperature</th>
-                    <th>Glucose Level</th>
-                </tr>
-                <tr>
-                    <td>84 bpm</td>
-                    <td>99%</td>
-                    <td>96.5°F</td>
-                    <td>100 mg/dL</td>
-                </tr>
-            </table>
-        </section>
-        <section class="test-reports">
-            <h2>Test Reports</h2>
-            <ul>
-                <li><img src="images/ct_scan.png" alt="CT Scan"> CT Scan Abdomen (12th December 2020)</li>
-                <li><img src="images/blood_test.png" alt="Blood Test"> Blood Test (15th December 2020)</li>
-                <li><img src="images/pathology_test.png" alt="Pathology Test"> Pathology Test (20th December 2020)</li>
-            </ul>
-        </section>
-        <section class="prescriptions">
-            <h2>Prescriptions</h2>
-            <table>
-                <tr>
-                    <th>Information</th>
-                    <th>Heart Disease</th>
-                    <th>Skin Care</th>
-                    <th>Diabetes Disease</th>
-                </tr>
-                <tr>
-                    <td>Gender: Male</td>
-                    <td>12 months</td>
-                    <td></td>
-                    <td>12 months</td>
-                </tr>
-                <tr>
-                    <td>Blood Type: A+</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                </table>
-            <button>Add a Prescription</button>
-        </section>
+      <div id="details" class="details"></div>
+    </div>
   </main>
+
+   <!-- Footer section -->
+   <div class="main-footer">
+    <div class="footer-inner">
+        <div class="footer-content">
+            <h1></h1>
+            <div class="link">
+                <a href=""></a>
+                
+                <a href=""> <div class="logo"><img src="images/logo3.png" alt=""></div></a>
+                <a href=""></a>
+                <a href=""></a>
+            </div>
+        </div>
+
+      
+
+        <div class="footer-content">
+         
+            <div class="link">
+                <nav class="navbar">
+                    <!-- <a href="./index.html">Home</a> -->
+                    <a href="./Doctors.html">Doctors</a>
+                    <a href="./service.html">Service</a>
+                    <a href="./Patient.html">Patient</a>
+                    <a href="#Home">Contact</a>
+                </nav>
+            </div>
+        </div>
+
+
+        <div class="footer-content">
+            <h1>Contact US</h1>
+            <div class="link">
+               
+                <a herf="">Name: Hospital Management</a>
+                <a href="">Email: management@gmail.com</a>
+                <a href="">Phone: +123 456 7890</a>
+            </div>
+        </div>
+
+        <div class="footer-content">
+            <h1></h1>
+            <div class="link">
+                <a href=""></a>
+                <a herf="">Privacy Policy</a>
+                <a href="">Terms and Conditions</a>
+                <a href=""></a>
+            </div>
+        </div>
+
+       
+    </div>
+    <p> all rights are reserved by Kumar Piyush </p>
+</div>
+<!-- Footer section ends -->
+
+  <script>
+    const inputsArray = [
+      { name: 'Kumar Piyush', age: 54, email: 'kumar245@gmail.com', phone: '3643832343' },
+      { name: 'sudipta padhi', age: 34, email: 'sudeepta345@gmail.com', phone: '4655687876' }
+
+    ];
+
+    document.getElementById('menu-bars').addEventListener('click', function() {
+      document.querySelector('.navbar').classList.toggle('active');
+    });
+
+    document.getElementById('patientForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent the form from submitting the traditional way
+
+      // Capture the input values
+      const name = document.getElementById('name').value;
+      const age = document.getElementById('age').value;
+      const email = document.getElementById('email').value;
+      const phone = document.getElementById('phone').value;
+
+      // Store the input data in an object
+      const inputData = { name, age, email, phone };
+
+      // Add the new input data to the array
+      inputsArray.unshift(inputData);
+
+      // Keep only the last 3 inputs
+      if (inputsArray.length > 8) {
+        inputsArray.pop();
+      }
+
+      // Update the technology section
+      updateTechnologySection();
+
+      // Optionally, clear the form fields after submission
+      document.getElementById('patientForm').reset();
+    });
+
+    function updateTechnologySection() {
+      const technologySection = document.getElementById('technologySection');
+      technologySection.innerHTML = ''; // Clear the current content
+
+      inputsArray.forEach((input, index) => {
+        const techDiv = document.createElement('div');
+        techDiv.classList.add('inner-technology');
+        techDiv.innerHTML = `
+          <span></span>
+          <i class="fi fi-tr-user-md"></i>
+          <h2>Entry ${index + 1}</h2>
+          <p><strong>Name:</strong> ${input.name}</p>
+          <p><strong>Age:</strong> ${input.age}</p>
+          <p><strong>Email:</strong> ${input.email}</p>
+          <p><strong>Phone:</strong> ${input.phone}</p>
+        `;
+        technologySection.appendChild(techDiv);
+      });
+    }
+
+    // Initialize the technology section with the pre-existing entry
+    updateTechnologySection();
+  </script>
 </body>
 </html>

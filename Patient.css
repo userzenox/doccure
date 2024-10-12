@@ -1,0 +1,315 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root {
+    --maincolor: #2ec8a6;
+    --secondcolor: #f8a803;
+    --thirdcolor: #f4ab01;
+    --textcolor: #4A5764;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all 0.2s linear;
+    font-family: "Inter", sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 7%;
+    width: 100%;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    background-color: white;
+}
+
+.logo {
+    width: 150px;
+}
+
+.logo img {
+    width: 100%;
+}
+
+.navbar a {
+    color: var(--textcolor);
+    font-size: 1.7rem;
+    margin: 1rem;
+    position: relative;
+    transition: 0.5s;
+}
+
+.navbar a:hover {
+    color: var(--maincolor);
+}
+
+.navbar a::after {
+    content: "";
+    background-color: var(--maincolor);
+    width: 0;
+    position: absolute;
+    height: 0.2rem;
+    left: 0;
+    margin-top: 0.5rem;
+    top: 100%;
+    transition: 0.5s;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+#menu-bars {
+    color: var(--textcolor);
+    font-size: 2.5rem;
+    cursor: pointer;
+    margin-right: 1rem;
+    display: none;
+}
+
+#menu-bars:hover {
+    color: var(--maincolor);
+}
+
+.right-icons .btn {
+    padding: 1.2rem 2rem;
+    font-size: 1.7rem;
+    background: var(--maincolor);
+    color: white;
+    cursor: pointer;
+}
+
+.right-icons .btn:hover {
+    background-color: var(--secondcolor);
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 2rem 7%;
+    margin-top: 0rem;
+   
+}
+
+
+
+form {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    width: 40rem;
+}
+
+form div {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--textcolor);
+}
+
+
+.btn-submit {
+    background-color: var(--maincolor);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: var(--secondcolor);
+}
+
+.details {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    font-size: 1.5rem;
+}
+
+.patient-review {
+    margin-top: 20px;
+    padding: 25px;
+    border: 1px solid var(--maincolor);
+    border-radius: 10px;
+    background-color: #f5f5f5;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    font-size: 1.8rem;
+}
+
+.patient-review h3 {
+    color: var(--maincolor);
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 55%;
+    }
+
+    .right-icons {
+        display: flex;
+        align-items: center;
+    }
+
+    #menu-bars {
+        display: initial;
+    }
+
+    header {
+        padding: 2rem;
+        background-color: white;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: -100%;
+        height: 100vh;
+        width: 100%;
+        background-color: white;
+    }
+
+    .navbar.active {
+        left: 0;
+    }
+
+    .navbar a {
+        display: block;
+        margin: 2rem;
+        padding: 1rem;
+        border: 1px solid var(--textcolor);
+    }
+}
+
+
+
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.section {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 10rem;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5rem; /* Space below the form */
+}
+
+input[type="text"], input[type="number"] {
+    width: 100%;
+    padding: 16px; /* Increased padding for larger input box */
+    font-size: 1.2rem; /* Increased font size */
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.technology {
+    padding: 3rem 7%;
+    margin-top: 5rem; /* Space above the technology section */
+    background-color: #f0f0f0;
+}
+
+.main-technology {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.inner-technology {
+    flex: 1 1 300px;
+    padding: 4rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background: url(images/backgroung-pattern-1.png) center/cover no-repeat;
+    cursor: pointer;
+    background-color: white;
+    position: relative;
+    z-index: 1;
+    transition: transform 0.3s;
+}
+
+.inner-technology:hover {
+    transform: scale(1.05);
+}
+
+.inner-technology span {
+    width: 0;
+    height: 100%;
+    background-color: var(--maincolor);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.inner-technology:hover span {
+    width: 100%;
+}
+
+.inner-technology i {
+    font-size: 48px;
+    color: var(--maincolor);
+}
+
+.inner-technology h2 {
+    font-size: 2.5rem;
+    padding: 1rem 0;
+}
+
+.inner-technology p {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    padding: 1rem 0;
+}
+
+.heading h1 {
+    font-size: 30px;
+    display: flex;
+    color: #2ec8a6;
+    text-align: center;
+    padding: 0px;
+    margin-bottom: 0rem;
+    margin-top: 2rem;
+    
+}
