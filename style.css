@@ -332,6 +332,7 @@ header {
     text-align: center;
     margin: 4rem;
     color: var(--maincolor);
+    margin-top: 10rem;
 }
 
 .main-inner-doctor {
